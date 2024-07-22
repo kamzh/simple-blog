@@ -3,3 +3,10 @@
 	width: 100%;
 	padding-top: 20px;
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+}

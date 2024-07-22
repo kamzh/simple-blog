@@ -51,19 +51,30 @@ export default function ArticleList() {
               description={article.description}
               text={article.text}
               slug={article.slug}
-              bookmarked={article.bookmarked} 
+              liked={article.liked} 
             />
           ))}
         </ul>
-        <Pagination
-          pageSize={10}
-          style={{ textAlign: "center", marginBottom: 30 }}
-          current={currentPage}
-          total={articlesCount}
-          showSizeChanger={false}
-          onChange={handlePageChange}
+        <PaginationWrapper
+          currentPage={currentPage}
+          articlesCount={articlesCount}
+          onPageChange={handlePageChange}
         />
       </div>
     </section>
   );
 }
+
+const PaginationWrapper = ({ currentPage, articlesCount, onPageChange }) => {
+  return (
+    <div className="pagination-container">
+      <Pagination
+        pageSize={10}
+        current={currentPage}
+        total={articlesCount}
+        showSizeChanger={false}
+        onChange={onPageChange}
+      />
+    </div>
+  );
+};
