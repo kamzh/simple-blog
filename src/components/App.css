@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background-color: rgba(235, 238, 243, 1);
+  overflow-x: hidden;
+}
+
+.appContainer {
+  background-color: rgba(235, 238, 243, 1);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding: 18px;
+  max-width: 960px;
+  margin: 0 auto 24px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+section {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.formContainer {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 562px) {
+  .container {
+    max-width: 320px;
+  }
+}
